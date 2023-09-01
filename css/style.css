@@ -1,0 +1,165 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue2: rgb(91, 79, 226);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Red Hat Display',
+        sans-serif;
+    background-image: url('/images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    min-height: 100vh;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.text-content {
+    padding: 7%;
+    margin: 0.95rem;
+    text-align: center;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text-content .subtitle {
+    color: var(--desaturated-blue);
+    margin-bottom: 30px;
+}
+
+.plan-box {
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.plan-box-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    line-height: -1.5;
+}
+
+.plan-box h5 {
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.plan-box p {
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.plan-box a {
+    margin-top: 15px;
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+.plan-box a:active {
+    text-decoration: none;
+}
+
+.proceed-btn {
+    display: grid;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--bright-blue);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.proceed-btn:active {
+    background-color: var(--bright-blue2);
+}
+
+.cancel-btn {
+    display: grid;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--desaturated-blue);
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: -20px;
+    font-weight: 900;
+}
+
+.cancel-btn:active {
+    color: var(--dark-blue)
+}
+
+
+/* Media queries for mobile design */
+
+@media (width <= 375px) {
+    body {
+        background-image: url('/images/pattern-background-mobile.svg');
+    }
+    .container {
+        max-width: 325px;
+    }
+    .text-content {
+        padding: 3%;
+        margin: 0.95rem;
+        text-align: center;
+    }
+    .plan-box {
+        padding: 1rem ;
+    }
+    .plan-box-left {
+        gap: 15px;
+        margin-left: -10px;
+    }
+    .plan-box h5 {
+        font-size: 13px;
+    }
+    .plan-box a {
+        margin-top: 15px;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+    .proceed-btn {
+        margin-bottom: 5px;
+    }
+    .title {
+        font-size: 24px;
+    }
+}
